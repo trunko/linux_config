@@ -20,8 +20,7 @@ $ cfdisk /dev/sda
 #### From there
 1. Select gpt
 1. Create 1 partition with the linux filesystem
-1. Leave space for linux swap, where the size should be the size of your RAM, or double that
-   (swap space saves data when computer goes to sleep)
+1. Leave space for linux swap, where the size should be the same as your RAM, preferably more
 1. Write, then type yes and quit
 
 ## Making a filesystem
