@@ -24,9 +24,10 @@ $ cfdisk /dev/sda
 1. Write, then type yes and quit
 
 ## Making a filesystem
-
+```shell
 $ mkfs.ext4 /dev/sda1
 $ mount /dev/sda1 /mnt
+```
 
 #### Enable swap space
 ```shell
@@ -42,7 +43,7 @@ $ ping -c 3 google.com
 ## Install Arch
 
 ```shell
-$ pacstrap /mnt base base-devel grub xorg-server xorg-xinit xorg-apps alsa-utils vim git
+$ pacstrap /mnt base base-devel grub xorg-server xorg-xinit xorg-apps alsa-utils vim git wireless_tools wpa_supplicant wpa_actiond dialog
 # Add any other packages you may need to the list
 ```
 
