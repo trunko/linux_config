@@ -1,0 +1,22 @@
+*.font: xft:Overpass Mono:size=10
+
+Xft.dpi:		96
+Xft.antialias:		true
+Xft.hinting:		full
+Xft.rgba:		rgb
+
+URxvt*title:		urxvt
+URxvt*termName:		rvxt-unicode
+URxvt.depth:		32
+URxvt*lineSpace:	1
+URxvt.letterSpace:	-5
+URxvt*geometry:		112x22
+URxvt.scrollBar:	false
+URxvt*loginShell:	true
+URxvt.internalBorder:	20
+URxvt.perl-ext-common:	default,matcher
+URxvt.url-launcher:	firefox
+URxvt.matcher.button:	1
+URxvt*borderless:	1
+URxvt*scrollTtyOutput:	false
+
