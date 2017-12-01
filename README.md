@@ -182,3 +182,35 @@ $ pacaur -Syyu
 $ sudo pacman -S feh imagemagick python-pip
 $ pacaur -S python-pywal
 ```
+
+## Configuring i3
+```shell
+$ cp /etc/X11/xinit/xinitrc ~/.xinitrc
+```
+
+Add `exec i3` to `.xinitrc`
+
+#### Installing Polybar
+```shell
+$ sudo pacman -S cairo libxcb python2 xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm jsoncpp
+$ pacaur -S polybar-git
+```
+
+* Copy .config files or make your own
+* Copy .Xresources file or make your own
+
+```shell
+$ xrdb .Xresources
+```
+
+In the Polybar config file, change the monitor line to whatever your display is when you run `xrandr`xrdb
+
+#### Get Fonts
+```shell
+$ pacaur -S otf-overpass
+```
+
+#### Setting Background and Colorscheme
+```shell
+$ wal -i ~/Pictures/Wal/bg1.jpg
+```
