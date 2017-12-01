@@ -79,6 +79,7 @@ $ echo arch > /etc/hostname
 #### Create a New User
 ```shell
 $ useradd -m -g users -G wheel -s /bin/bash (username)
+$ passwd (username)
 ```
 
 #### Give Your User `sudo` Access
