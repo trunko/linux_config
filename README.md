@@ -110,19 +110,21 @@ $ shutdown now
 
 **At this point, remove the disk to boot into Arch normally**
 
-## Login as Your New User
+## Setting Up Your System
+
+Login as your user that you made.
 
 #### Setup Internet Connection:
 ```shell
 $ cd /etc/netctl/examples/
 # Use ls to find which kind of connection you want
-$ sudo cp /etc/netctl/examples/connection-type /etc/netctl/
-$ ip a
+$ sudo cp /etc/netctl/examples/connection-name /etc/netctl/
+$ ip link
 # Don't worry about lo, remember your connection name
 # Go to the created file
-$ sudo vim /etc/netctl/
-# Change the interface line to enp0s3
-$ sudo netctl start ethernet-dhcp
+$ sudo vim /etc/netctl/connection-name
+# Change the interface line to whatever you found from ip link
+$ sudo netctl start connection-name
 ```
 
 #### Update pacman
@@ -177,12 +179,6 @@ To Update all Official and AUR Packages:
 $ pacaur -Syyu
 ```
 
-#### Setup Desktop Background and Colorscheme
-```shell
-$ sudo pacman -S feh imagemagick python-pip
-$ pacaur -S python-pywal
-```
-
 ## Configuring i3
 ```shell
 $ cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -207,10 +203,18 @@ In the Polybar config file, change the monitor line to whatever your display is 
 
 #### Get Fonts
 ```shell
-$ pacaur -S otf-overpass
+$ pacaur -S noto-fonts
 ```
 
-#### Setting Background and Colorscheme
+#### Setup Desktop Background
 ```shell
-$ wal -i ~/Pictures/Wal/bg1.jpg
+$ sudo pacman -S feh
+$ feh --bg-scale (image path)
 ```
+
+#### Install Vundle
+```shell
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then configure the plugins in your `.vimrc`
