@@ -1,68 +1,107 @@
+[colors]
+
+bg=${xrdb:background}
+blk=${xrdb:color0}
+red=${xrdb:color1}
+grn=${xrdb:color2}
+ylw=${xrdb:color3}
+blu=${xrdb:color4}
+mag=${xrdb:color5}
+cyn=${xrdb:color6}
+wht=${xrdb:color7}
+fg=${xrdb:foreground}
+
 [bar/bar]
-
-font-0 = "Overpass Mono:pixelsize=10;2.25"
-
+font-0 = "Noto Mono:pixelsize=10;2.25"
 monitor = "VGA-1"
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
+foreground=${colors.fg}
+background=${colors.bg}
 fixed-center = true
-
 width = 100%
 height = 30
-
-background = #1d1f21
-foreground = #707880
-
 radius = 0.0
-
-# line-size = 1
-# line-color = #f00
-
-# border-size = 2
-# border-color = #00ff00
 padding-left = 1
 padding-right = 1
 module-margin = 0
-
 modules-left = i3
 modules-center = date
+modules-right = volume padding battery
 
 [module/i3]
 strip-wsnumbers = true
 type = internal/i3
 format = <label-state> <label-mode>
-
 label-focused = %index%
-label-focused-foreground = #cc6666
-label-focused-background = #1d1f21
-label-focused-underline = #fba922
+label-focused-foreground = ${colors.bg}
+label-focused-background = ${colors.fg}
 label-focused-padding = 1
-
 label-unfocused = %index%
 label-unfocused-padding = 1
-
 label-visible = %index%
-label-visible-underline = #555555
 label-visible-padding = 1
-
 label-urgent = %index%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
+label-urgent-foreground = ${colors.fg}
+label-urgent-background = ${colors.bg}
 label-urgent-padding = 1
 
 [module/date]
 type = internal/date
 interval = 1.0
-date = %A, %d %B %I:%M %p
+date = %a, %b %d %I:%M %p
+label-background=${colors.bg}
+label-foreground=${colors.fg}
+label-padding=1
 
-[module/title]
-type = internal/xwindow
-# format-background = #f00
-format-foreground = #f0c674
-format-padding = 1
-label-maxlen = 50
+[module/battery]
+type=internal/battery
+full-at=99
+battery=BAT0
+adapter=AC0
+poll-interval=5
+format-charging =<label-charging>
+format-discharging =<label-discharging>
+format-full =<lavel-full>
+label-charging=Charging %percentage%
+label-charging-padding=1
+label-charging-background=${colors.bg}
+label-charging-foreground=${colors.fg}
+label-discharging=Discharging %percentage%
+label-discharging-background=${colors.bg}
+label-discharging-foreground=${colors.fg}
+label-discharging-padding=1
+label-full=%percentage%
+label-full-foreground=${colors.bg}
+animation-charging-background=${colors.bg}
+animation-charging-foreground=${colors.fg}
+animation-charging-padding=1
+ramp-capacity-padding=1
+ramp-capacity-background=${colors.bg}
+ramp-capacity-foreground=${colors.fg}
+animation-charging-framerate=750
+
+[module/volume]
+type=internal/volume
+format-volume =<label-volume>
+format-muted =<label-muted>
+ramp-volume-background=${colors.bg}
+ramp-volume-foreground=${colors.fg}
+ramp-volume-padding=1
+label-volume=Volume %percentage%
+label-volume-background=${colors.bg}
+label-volume-foreground=${colors.fg}
+label-volume-padding=1
+label-muted=Volume Muted
+label-muted-foreground=${colors.fg}
+label-muted-background=${colors.bg}
+label-muted-padding=1
+format-volume-padding=0
+format-muted-padding=0
+
+[module/padding]
+type=custom/text
+content=|
+content-foreground=${colors.bg}
+content-background=${colors.bg}
 
 [settings]
 screenchange-reload = true
