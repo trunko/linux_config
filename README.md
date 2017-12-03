@@ -211,3 +211,10 @@ $ pacaur -S noto-fonts
 $ sudo pacman -S feh
 $ feh --bg-scale (image path)
 ```
+
+#### Install Vundle
+```shell
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then configure the plugins in your `.vimrc`
