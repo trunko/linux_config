@@ -159,11 +159,11 @@ set_from_resource $bcyn color14
 set_from_resource $bwht color15
 
 # Window State              Border      Background  Text        Indicator       Child_border
-client.focused		        $fg         $fg         $bg         $fg             $fg
+client.focused		    $fg         $fg         $bg         $fg             $fg
 client.focused_inactive	    $bg         $bg         $fg         $bg             $bg
-client.unfocused	        $bg         $bg         $fg         $bg             $bg
-client.urgent		        $fg         $fg         $bg         $fg             $fg
-client.placeholder	        $fg         $fg         $bg         $fg             $fg
+client.unfocused	    $bg         $bg         $fg         $bg             $bg
+client.urgent		    $fg         $fg         $bg         $fg             $fg
+client.placeholder	    $fg         $fg         $bg         $fg             $fg
 
 client.background	        $bg
 
