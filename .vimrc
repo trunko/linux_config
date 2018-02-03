@@ -10,6 +10,7 @@ Plugin 'itchyny/lightline.vim'
 Bundle 'yonchu/accelerated-smooth-scroll'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -43,8 +44,8 @@ set visualbell
 set t_vb=
 set laststatus=2
 
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
 
@@ -55,25 +56,12 @@ set ignorecase
 set smartcase
 set gdefault
 
-au FileType {make,gitconfig,go} setl noexpandtab
-
-au BufNewFile,BufRead *.json setf javascript
-
-au FileType python setl softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
-
-:nnoremap <CR> :nohlsearch<cr>
-
-:nnoremap <Space> za
-
+nnoremap <CR> :nohlsearch<cr>
+nnoremap <Space> za
 nnoremap B ^
 nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
-
-map <leader>y "*y
-
-nmap <leader>p pV` ]=
-nmap <leader>P PV` ]=
 
 map Y y$
 
