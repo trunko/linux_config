@@ -218,3 +218,8 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 Then configure the plugins in your `.vimrc`
+
+#### In case of key unavailable for AUR
+```shell
+$ gpg --recv-key key
+```
