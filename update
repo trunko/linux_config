@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cp ~/.xinitrc ./
+cp ~/.Xresources ./
+cp ~/.vimrc ./
+cp ~/.bashrc ./
+
+cp ~/Pictures/wallpaper ./
+
+cp ~/.config/bspwm/* ./config/bspwm/
+cp ~/.config/sxhkd/* ./config/sxhkd/
+cp ~/.config/polybar/* ./config/polybar/

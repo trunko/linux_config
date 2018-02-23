@@ -6,7 +6,7 @@ xrandr --output VGA-1 --mode 1920x1080 --rate 60
 
 feh --bg-tile ~/Pictures/wallpaper
 
-polybar bar &
+polybar bspbar &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
