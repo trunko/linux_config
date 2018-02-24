@@ -111,11 +111,11 @@ label-urgent-padding = 1
 type = internal/date
 interval = 5
 
-date =
-date-alt = "%Y-%m-%d"
+date = ""
+date-alt = "%m-%d-%Y"
 
 time = "%I:%M %p"
-time-alt = "%I:%M %p"
+time-alt = " %I:%M %p"
 
 label-background = ${colors.bg}
 label-foreground = ${colors.fg}
