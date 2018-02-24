@@ -13,7 +13,7 @@ URxvt*transparent:      false
 URxvt*shading:          20
 URxvt.visualBell:       true
 URxvt.loginShell:       true
-URxvt.saveLines:        50
+URxvt.saveLines:        250
 URxvt.lineSpace:        0
 
 URxvt.allow_bold:       false
