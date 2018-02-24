@@ -2,7 +2,7 @@
 
 sxhkd &
 
-xrandr --output VGA-1 --mode 1920x1080 --rate 60
+xrandr --output eDP1 --mode 1920x1080 --rate 60
 
 feh --bg-tile ~/Pictures/wallpaper
 
