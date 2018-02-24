@@ -15,7 +15,6 @@ URxvt.visualBell:       true
 URxvt.loginShell:       true
 URxvt.saveLines:        50
 URxvt.lineSpace:        0
-URxvt*buffered:         false
 
 URxvt.allow_bold:       false
 
