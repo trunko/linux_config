@@ -13,6 +13,7 @@ fg = ${xrdb:foreground}
 
 
 [bar/bspbar]
+
 font-0 = "Noto Mono:pixelsize=12;2"
 monitor = "eDP1"
 
@@ -30,10 +31,11 @@ padding-right = 1
 
 modules-left = bspwm xwindow
 modules-center = date
-modules-right = network volume battery
+modules-right = network break volume break battery
 
 
 [bar/i3bar]
+
 font-0 = "Noto Mono:pixelsize=12;2"
 monitor = "eDP1"
 
@@ -55,6 +57,7 @@ modules-right = network volume battery
 
 
 [module/xwindow]
+
 type = internal/xwindow
 label = %title%
 label-maxlen = 30
@@ -62,6 +65,7 @@ label-padding = 2
 
 
 [module/bspwm]
+
 type = internal/bspwm
 
 label-focused = %index%
@@ -80,6 +84,7 @@ label-empty =
 
 
 [module/i3]
+
 type = internal/i3
 
 strip-wsnumbers = true
@@ -91,7 +96,7 @@ label-focused-background = ${colors.fg}
 label-focused-padding = 1
 
 label-unfocused = %index%
-label-unfocused-paddinge = 1
+label-unfocused-padding = 1
 
 label-visible = %index%
 label-visible-padding = 1
@@ -102,22 +107,24 @@ label-urgent-padding = 1
 
 
 [module/date]
+
 type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = "%Y-%m-%d"
 
-time = %I:%M %p
-time-alt = %I:%M %p
+time = "%I:%M %p"
+time-alt = "%I:%M %p"
 
-label-background = ${colors.fg}
-label-foreground = ${colors.bg}
+label-background = ${colors.bg}
+label-foreground = ${colors.fg}
 label-padding = 1
-label = %date% %time%
+label = %date%%time%
 
 
 [module/battery]
+
 type = internal/battery
 full-at = 99
 battery = BAT1
@@ -129,22 +136,23 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 
 label-charging = Charging: %percentage%
-label-charging-foreground = ${colors.bg}
-label-charging-background = ${colors.fg}
+label-charging-foreground = ${colors.fg}
+label-charging-background = ${colors.bg}
 label-charging-padding = 1
 
 label-discharging = Battery: %percentage%
-label-discharging-foreground = ${colors.bg}
-label-discharging-background = ${colors.fg}
+label-discharging-foreground = ${colors.fg}
+label-discharging-background = ${colors.bg}
 label-discharging-padding = 1
 
 label-full = Battery: Full
-label-full-foreground = ${colors.bg}
-label-full-background = ${colors.fg}
+label-full-foreground = ${colors.fg}
+label-full-background = ${colors.bg}
 label-full-padding = 1
 
 
 [module/volume]
+
 type=internal/volume
 
 format-volume = <label-volume>
@@ -155,13 +163,13 @@ ramp-volume-foreground = ${colors.fg}
 ramp-volume-padding = 1
 
 label-volume=Volume: %percentage%
-label-volume-background = ${colors.fg}
-label-volume-foreground = ${colors.bg}
+label-volume-background = ${colors.bg}
+label-volume-foreground = ${colors.fg}
 label-volume-padding = 1
 
 label-muted = Volume: Muted
-label-muted-foreground = ${colors.bg}
-label-muted-background = ${colors.fg}
+label-muted-foreground = ${colors.fg}
+label-muted-background = ${colors.bg}
 label-muted-padding = 1
 
 format-volume-padding = 0
@@ -169,6 +177,7 @@ format-muted-padding = 0
 
 
 [module/network]
+
 type = internal/network
 
 interface = wlp3s0
@@ -176,18 +185,27 @@ interval = 3.0
 
 format-connected = <label-connected>
 label-connected = %essid%
-label-connected-background = ${colors.fg}
-label-connected-foreground = ${colors.bg}
+label-connected-background = ${colors.bg}
+label-connected-foreground = ${colors.fg}
 label-connected-padding = 1
 
 format-disconnected = <label-disconnected>
 label-disconnected = Disconnected
-label-disconnected-background = ${colors.fg}
-label-disconnected-foreground = ${colors.bg}
+label-disconnected-background = ${colors.bg}
+label-disconnected-foreground = ${colors.fg}
 label-disconnected-padding = 1
 
 
+[module/break]
+
+type = custom/text
+content = "|"
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+
+
 [settings]
+
 screenchange-reload = true
 ;compositing-background = xor
 ;compositing-background = screen

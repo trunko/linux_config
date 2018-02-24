@@ -1,4 +1,4 @@
-*.font: xft:Noto Mono:size=10
+*.font: xft:Noto Mono:size=11
 
 Xft.dpi:                96
 Xft.antialias:          true
@@ -11,10 +11,11 @@ URxvt.geometry:         90x30
 URxvt.fading:           0
 URxvt*transparent:      false
 URxvt*shading:          20
-URxvt.visualBell:       false
+URxvt.visualBell:       true
 URxvt.loginShell:       true
-URxvt.saveLines:        250
+URxvt.saveLines:        50
 URxvt.lineSpace:        0
+URxvt*buffered:         false
 
 URxvt.allow_bold:       false
 
