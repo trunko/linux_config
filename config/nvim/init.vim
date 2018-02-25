@@ -7,10 +7,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
-Bundle 'yonchu/accelerated-smooth-scroll'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -27,7 +25,6 @@ set number
 set ruler
 
 set showcmd
-set mouse=a
 
 set noshowmode
 
