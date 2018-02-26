@@ -14,7 +14,7 @@ fg = ${xrdb:foreground}
 
 [bar/bspbar]
 
-font-0 = "Noto Mono:pixelsize=14;3"
+font-0 = "Hack:pixelsize=14;3"
 monitor = "eDP1"
 
 foreground = ${colors.fg}
@@ -60,7 +60,6 @@ modules-right = network volume battery
 
 type = internal/xwindow
 label = %title%
-label-maxlen = 30
 label-padding = 2
 
 
