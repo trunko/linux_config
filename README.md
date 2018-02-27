@@ -56,7 +56,7 @@ $ rankmirrors /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 
 #### Install Base Packages
 ```shell
-$ pacstrap -i /mnt base base-devel grub sudo neovim
+$ pacstrap -i /mnt base base-devel
 ```
 
 #### Generate Filesystem Tab
@@ -71,7 +71,7 @@ $ arch-chroot /mnt
 
 #### Install Packages
 ```shell
-$ pacman -S openssh grub-bios linux-headers linux-lts linux-lts-headers git
+$ pacman -S openssh sudo neovim grub-bios linux-headers linux-lts linux-lts-headers git
 # for wireless connections
 $ pacman -S wpa_supplicant wireless_tools
 ```
