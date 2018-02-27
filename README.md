@@ -176,7 +176,7 @@ $ pacman -S networkmanager network-manager-applet wireless_tools wpa_supplicant 
 
 #### Install X Window
 ```shell
-$ pacman -S xf86-input-libinput xorg xorg-server xorg-xinit xorg-server-utils mesa
+$ pacman -S xf86-input-libinput xorg xorg-server xorg-xinit xorg-apps alsa-utils mesa
 
 #### Update Video Drivers
 ```shell
