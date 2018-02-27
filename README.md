@@ -49,7 +49,7 @@ $ netctl start wireless-name
 ## Install Arch
 
 ```shell
-$ pacstrap -i /mnt base
+$ pacstrap -i /mnt base base-devel grub sudo neovim
 ```
 
 ```shell
@@ -63,7 +63,7 @@ $ arch-chroot /mnt
 
 #### Install Packages
 ```shell
-$ pacman -S openssh grub-bios linux-headers linux-lts linux-lts-headers neovim sudo git
+$ pacman -S openssh grub-bios linux-headers linux-lts linux-lts-headers git
 # for wireless connections
 $ pacman -S wpa_supplicant wireless_tools
 ```
@@ -166,9 +166,9 @@ $ sudo pacman -Syu
 $ pacman -S networkmanager network-manager-applet wireless_tools wpa_supplicant wpa_actiond dialog
 ```
 
-#### Install XWindow
+#### Install X Window
 ```shell
-$ pacman -S xf86-input-libinput xorg-server xorg-xinit xorg-server-utils mesa
+$ pacman -S xf86-input-libinput xorg xorg-server xorg-xinit xorg-server-utils mesa
 
 #### Update Video Drivers
 ```shell
@@ -190,19 +190,19 @@ $ pacman -S xf86-video-intel
 $ sudo pacman -S bspwm sxhkd dmenu
 ```
 
+#### Install Display Manager
+```shell
+$ sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+```
+
 #### Install terminal emulator
 ```shell
 $ sudo pacman -S termite
 ```
 
-#### Install Firefox
+#### Install Other Stuff Necessary
 ```shell
-$ sudo pacman -S firefox
-```
-
-#### Install Ranger
-```shell
-$ sudo pacman -S ranger
+$ sudo pacman -S firefox ranger vlc 
 ```
 
 #### Install Pacaur
