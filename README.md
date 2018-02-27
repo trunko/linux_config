@@ -48,10 +48,18 @@ $ netctl start wireless-name
 
 ## Install Arch
 
+#### Update Mirrors
+```shell
+$ mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+$ rankmirrors /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
+```
+
+#### Install Base Packages
 ```shell
 $ pacstrap -i /mnt base base-devel grub sudo neovim
 ```
 
+#### Generate Filesystem Tab
 ```shell
 $ genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
