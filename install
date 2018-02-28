@@ -9,39 +9,44 @@ fi
 
 # Installs WM config files based on arg 1
 
-if [ $1 = "bspwm" ]
+if ! [ $# -eq 0 ]
 then
-    if ! [ -d "~/.config/bspwm" ]
+    if [ $1 = "bspwm" ]
     then
-        mkdir ~/.config/bspwm
-    fi
+        if ! [ -d "~/.config/bspwm" ]
+        then
+            mkdir ~/.config/bspwm
+        fi
 
-    cp ./config/bspwm/* ~/.config/bspwm/
+        cp ./config/bspwm/* ~/.config/bspwm/
 
-    if ! [ -d "~/.config/sxhkd" ]
+        if ! [ -d "~/.config/sxhkd" ]
+        then
+            mkdir ~/.config/sxhkd
+        fi
+
+        cp ./config/sxhkd/* ~/.config/sxhkd/
+
+        cp ./xinitrc/bspwm ~/.xinitrc
+    elif [ $1 = "i3" ]
     then
-        mkdir ~/.config/sxhkd
-    fi
+        if ! [ -d "~/.config/i3" ]
+        then
+            mkdir ~/.config/i3
+        fi
 
-    cp ./config/sxhkd/* ~/.config/sxhkd/
-
-    cp ./xinitrc/bspwm ~/.xinitrc
-elif [ $1 = "i3" ]
-then
-    if ! [ -d "~/.config/i3" ]
+        cp ./xinitrc/i3 ~/.xinitrc
+    elif [ $1 = "openbox" ]
     then
-        mkdir ~/.config/i3
-    fi
+        if ~ [ -d "~/.config/openbox" ]
+        then
+            mkdir ~/.config/openbox
+        fi
 
-    cp ./xinitrc/i3 ~/.xinitrc
-elif [ $1 = "openbox" ]
-then
-    if ~ [ -d "~/.config/openbox" ]
-    then
-        mkdir ~/.config/openbox
+        cp ./xinitrc/openbox ~/.xinitrc
     fi
-
-    cp ./xinitrc/openbox ~/.xinitrc
+else
+    echo "No window manager specified"
 fi
 
 # Copies Xdefaults and bashrc to /home

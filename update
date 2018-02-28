@@ -1,13 +1,42 @@
 #!/bin/bash
 
-cp ~/.xinitrc ./
-cp ~/.Xdefaults ./
-cp ~/.bashrc ./
+# Installs WM config files based on arg 1
 
-cp ~/Pictures/wallpaper ./
+if ! [ $# -eq 0 ]
+then
+    if [ $1 = "bspwm" ]
+    then
+        cp ~/.config/bspwm/* ./config/bspwm/
+        cp ~/.config/sxhkd/* ./config/sxhkd/
+        cp ~/.xinitrc ./xinitrc/bspwm
+    elif [ $1 = "i3" ]
+    then
+        cp ~/.xinitrc ./xinitrc/i3
+    elif [ $1 = "openbox" ]
+    then
+        cp ~/.xinitrc ./xinitrc/openbox
+    fi
+else
+    echo "No window manager specified."
+fi
 
-cp ~/.config/bspwm/* ./config/bspwm/
-cp ~/.config/sxhkd/* ./config/sxhkd/
+# Updates Xdefaults and bashrc
+
+cp ~/.Xdefaults ./Xdefaults
+cp ~/.bashrc ./bashrc
+
+# Update Current Wallpaper
+
+cp ~/Pictures/wallpaper ./wallpaper
+
+# Update Polybar Config
+
 cp ~/.config/polybar/* ./config/polybar/
+
+# Update Neovim Config
+
 cp ~/.config/nvim/* ./config/nvim/
+
+# Update Termite Config
+
 cp ~/.config/termite/* ./config/termite/
