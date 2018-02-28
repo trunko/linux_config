@@ -1,3 +1,36 @@
+*.font: xft:Hack:size=12
+
+Xft.dpi:                96
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.hintstyle:          hintslight
+
+URxvt.depth:            32
+URxvt.geometry:         90x30
+URxvt.fading:           0
+URxvt*transparent:      false
+URxvt*shading:          20
+URxvt.visualBell:       true
+URxvt.loginShell:       true
+URxvt.saveLines:        250
+URxvt.lineSpace:        0
+
+URxvt.allow_bold:       false
+
+URxvt*letterSpace:      -1
+
+URxvt.scrollStyle:      rxvt
+URxvt.scrollBar:        false
+
+URxvt.internalBorder:   15
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.matcher.button:   1
+URxvt.urlLauncher:      firefox
+
+URxvt.pointerBlank:     true
+
 ! special
 *.foreground:   #c5c8c6
 *.background:   #1d1f21
