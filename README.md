@@ -174,7 +174,10 @@ $ sudo pacman -Syu
 ```shell
 $ pacman -S networkmanager network-manager-applet wireless_tools wpa_supplicant wpa_actiond dialog
 $ systemctl enable NetworkManager.service
+# Network Manager Command Line Interface
 $ nmcli
+# Network Manager Terminal User Interface
+$ nmtui
 ```
 
 #### Install X Window
