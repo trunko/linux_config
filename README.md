@@ -155,6 +155,7 @@ $ vim /etc/fstab
 # add at the bottom:
 # UUID=YOUR_UUID    none    swap    defaults    0 0
 # On the / and /home directories, add "discard," after rw if you have an SSD
+# or you can use swapon /dev/sda2dhc
 ```
 
 #### If using ethernet
@@ -249,6 +250,11 @@ In the Polybar config file, change the monitor line to whatever your display is 
 #### Get Fonts
 ```shell
 $ pacaur -S ttf-hack
+```
+
+#### Get Dmenu2
+```shell
+$ pacaur -S dmenu2
 ```
 
 #### Setup Desktop Background
