@@ -40,3 +40,4 @@ cp ~/.config/nvim/* ./config/nvim/
 # Update Termite Config
 
 cp ~/.config/termite/* ./config/termite/
+cp ~/.config/gtk-3.0/* ./config/gtk-3.0/
