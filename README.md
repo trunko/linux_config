@@ -103,7 +103,7 @@ $ systemctl enable sshd.service
 
 #### Create a Host Name
 ```shell
-$ hostnamectl set-hostname arch
+$ hostnamectl set-hostname 'arch'
 ```
 
 #### Create a New User
@@ -268,3 +268,31 @@ Then configure the plugins for vim or nvim.
 ```shell
 $ gpg --recv-key key
 ```
+
+#### Pacman / Pacaur Commands
+```shell
+# Install
+$ pacman -S package-name
+$ pacaur -S package-name
+# Update Official
+$ pacman -Syu
+# Update Official and AUR
+$ pacaur -Syyu
+# Remove Package With Unused Dependencies
+$ pacman -Rns package-name
+$ pacaur -Rns package-name
+# List Orphan Packages
+$ pacman -Qtd
+# Recursively Remove Orphan Packages
+$ pacman -Rns $(pacman -Qtdq)
+# List Foreign Packages
+$ pacman -Qm
+```
+
+#### Maintinence
+```shell
+$ sudo pacman -S rmlint
+```
+A script that scans the current directory or some path with `rmlint`.
+Generates a file `rmlint.sh` that you can run to remove suspicious files.
+Edit if necessary to keep some stuff.
