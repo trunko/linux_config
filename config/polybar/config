@@ -15,7 +15,6 @@ fg = ${xrdb:foreground}
 [bar/bspbar]
 
 font-0 = "Hack:pixelsize=14;3"
-monitor = "eDP1"
 
 foreground = ${colors.fg}
 background = ${colors.bg}
@@ -37,7 +36,6 @@ modules-right = network break volume break battery break date
 [bar/i3bar]
 
 font-0 = "Noto Mono:pixelsize=12;2"
-monitor = "eDP1"
 
 foreground = ${colors.fg}
 background = ${colors.bg}

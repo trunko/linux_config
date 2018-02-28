@@ -6,7 +6,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias poweroff='systemctl poweroff'
 alias vim='nvim'
 PS1='\u@\h: \W \$ '
 
