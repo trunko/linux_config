@@ -42,9 +42,9 @@ else
     echo "No window manager specified"
 fi
 
-# Copies Xdefaults and bashrc to /home
+# Copies Xresources and bashrc to /home
 
-cp ./Xdefaults ~/.Xdefaults
+cp ./Xresources ~/.Xresources
 cp ./bashrc ~/.bashrc
 
 # Create Pictures Directory and add Wallpaper
