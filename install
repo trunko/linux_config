@@ -1,28 +1,21 @@
 #!/bin/bash
 
-# Creates the .config directory if it doesn't exist
-
-if ! [ -d "~/.config" ]
-then
-    mkdir ~/.config
-fi
-
 # Installs WM config files based on arg 1
 
-if ! [ $# -eq 0 ]
+if [ ! $# -eq 0 ]
 then
     if [ $1 = "bspwm" ]
     then
-        if ! [ -d "~/.config/bspwm" ]
+        if [ ! -d ~/.config/bspwm ]
         then
-            mkdir ~/.config/bspwm
+            mkdir -p ~/.config/bspwm
         fi
 
         cp ./config/bspwm/* ~/.config/bspwm/
 
-        if ! [ -d "~/.config/sxhkd" ]
+        if [ ! -d ~/.config/sxhkd ]
         then
-            mkdir ~/.config/sxhkd
+            mkdir -p ~/.config/sxhkd
         fi
 
         cp ./config/sxhkd/* ~/.config/sxhkd/
@@ -30,17 +23,17 @@ then
         cp ./xinitrc/bspwm ~/.xinitrc
     elif [ $1 = "i3" ]
     then
-        if ! [ -d "~/.config/i3" ]
+        if [ ! -d ~/.config/i3 ]
         then
-            mkdir ~/.config/i3
+            mkdir -p ~/.config/i3
         fi
 
         cp ./xinitrc/i3 ~/.xinitrc
     elif [ $1 = "openbox" ]
     then
-        if ~ [ -d "~/.config/openbox" ]
+        if [ ! -d ~/.config/openbox ]
         then
-            mkdir ~/.config/openbox
+            mkdir -p ~/.config/openbox
         fi
 
         cp ./xinitrc/openbox ~/.xinitrc
@@ -56,36 +49,36 @@ cp ./bashrc ~/.bashrc
 
 # Create Pictures Directory and add Wallpaper
 
-if ! [ -d "~/Pictures" ]
+if [ ! -d ~/Pictures ]
 then
-    mkdir ~/Pictures
+    mkdir -p ~/Pictures
 fi
 
 cp ./wallpaper ~/Pictures/
 
 # Create Polybar Config Directory and File
 
-if ! [ -d "~/.config/polybar" ]
+if [ ! -d ~/.config/polybar ]
 then
-    mkdir ~/.config/polybar
+    mkdir -p ~/.config/polybar
 fi
 
 cp ./config/polybar/* ~/.config/polybar/
 
 # Create Neovim Config Directory and File
 
-if ! [ -d "~/.config/nvim" ]
+if [ ! -d ~/.config/nvim ]
 then
-    mkdir ~/.config/nvim
+    mkdir -p ~/.config/nvim
 fi
 
 cp ./config/nvim/* ~/.config/nvim/
 
 # Create Termite Config Directory and File
 
-if ! [ -d "~/.config/termite" ]
+if [ ! -d ~/.config/termite ]
 then
-    mkdir ~/.config/termite
+    mkdir -p ~/.config/termite
 fi
 
 cp ./config/termite/* ~/.config/termite/
