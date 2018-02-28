@@ -173,6 +173,8 @@ $ sudo pacman -Syu
 #### Finish Setting up Internet
 ```shell
 $ pacman -S networkmanager network-manager-applet wireless_tools wpa_supplicant wpa_actiond dialog
+$ systemctl enable NetworkManager.service
+$ nmcli
 ```
 
 #### Install X Window
