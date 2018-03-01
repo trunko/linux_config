@@ -48,7 +48,7 @@ cp -r ./config/polybar ~/.config/polybar
 
 # Create Neovim Config Directory and File
 
-cp -r ./config/nvim/* ~/.config/nvim
+cp -r ./config/nvim ~/.config/nvim
 
 # Create Termite Config Directory and File
 
