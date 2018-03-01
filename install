@@ -6,36 +6,18 @@ if [ ! $# -eq 0 ]
 then
     if [ $1 = "bspwm" ]
     then
-        if [ ! -d ~/.config/bspwm ]
-        then
-            mkdir -p ~/.config/bspwm
-        fi
+        cp -r ./config/bspwm ~/.config/bspwm
 
-        cp ./config/bspwm/* ~/.config/bspwm/
-
-        if [ ! -d ~/.config/sxhkd ]
-        then
-            mkdir -p ~/.config/sxhkd
-        fi
-
-        cp ./config/sxhkd/* ~/.config/sxhkd/
+        cp -r ./config/sxhkd ~/.config/sxhkd
 
         cp ./xinitrc/bspwm ~/.xinitrc
     elif [ $1 = "i3" ]
     then
-        if [ ! -d ~/.config/i3 ]
-        then
-            mkdir -p ~/.config/i3
-        fi
+        cp -r ./config/i3 ~/.config/i3
 
         cp ./xinitrc/i3 ~/.xinitrc
     elif [ $1 = "openbox" ]
     then
-        if [ ! -d ~/.config/openbox ]
-        then
-            mkdir -p ~/.config/openbox
-        fi
-
         cp ./xinitrc/openbox ~/.xinitrc
     fi
 else
@@ -58,28 +40,20 @@ cp ./wallpaper ~/Pictures/
 
 # Create Polybar Config Directory and File
 
-if [ ! -d ~/.config/polybar ]
-then
-    mkdir -p ~/.config/polybar
-fi
-
-cp ./config/polybar/* ~/.config/polybar/
+cp -r ./config/polybar ~/.config/polybar
 
 # Create Neovim Config Directory and File
 
-if [ ! -d ~/.config/nvim ]
-then
-    mkdir -p ~/.config/nvim
-fi
-
-cp ./config/nvim/* ~/.config/nvim/
+cp -r ./config/nvim/* ~/.config/nvim/
 
 # Create Termite Config Directory and File
 
-if [ ! -d ~/.config/termite ]
-then
-    mkdir -p ~/.config/termite
-fi
+cp -r ./config/termite ~/.config/termite
 
-cp ./config/termite/* ~/.config/termite/
-cp ./config/gtk-3.0/* ~/.config/gtk-3.0/
+# Create GTK3.0 Config Directory
+
+cp -r ./config/gtk-3.0 ~/.config/gtk-3.0
+
+# Create Icons Directory
+
+cp -r ./icons ~/.icons
