@@ -9,7 +9,7 @@ Referencing the official wiki setup guide [here](https://wiki.archlinux.org/inde
 $ fdisk -l
 ```
 
-Find the drive to install to, probably in the form sda.
+Find the drive to install to, probably in the form `sda`.
 
 #### Once the correct drive is found:
 ```shell
@@ -17,7 +17,7 @@ $ cfdisk /dev/sda
 # Where sda is the disk to format
 ```
 
-#### From there
+#### From there:
 1. Select gpt
 1. Create 1 partition with the linux filesystem
 1. Leave space for linux swap, where the size should be the same as your RAM, preferably double
@@ -48,7 +48,7 @@ $ netctl start wireless-name
 
 ## Install Arch
 
-#### Update Mirrors
+#### Update Mirrors if Necessary
 ```shell
 $ mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 $ rankmirrors /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
@@ -103,7 +103,7 @@ $ systemctl enable sshd.service
 
 #### Create a Host Name
 ```shell
-$ hostnamectl set-hostname 'arch'
+$ echo arch > /etc/hostname
 ```
 
 #### Create a New User
@@ -129,7 +129,7 @@ $ alsamixer
 ```shell
 $ grub-install --target=i386-pc --recheck /dev/sda
 # use the --force tag if using a vm
-$ cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+$ mkinitcpio -p linux
 $ grub-mkconfig -o /boot/grub/grub.cfg
 $ exit
 $ umount /mnt/home
@@ -142,7 +142,7 @@ $ umount /mnt
 
 Login as your user that you made.
 
-#### Update Locale
+#### Update Locale if Necessary
 ```shell
 $ localectl set-locale LANG="en_US.UTF-8"
 ```
@@ -155,19 +155,7 @@ $ vim /etc/fstab
 # add at the bottom:
 # UUID=YOUR_UUID    none    swap    defaults    0 0
 # On the / and /home directories, add "discard," after rw if you have an SSD
-# or you can use swapon /dev/sda2dhc
-```
-
-#### If using ethernet
-```shell
-$ dhcpcd
-```
-
-**Redo the wireless setup if not connected if using wifi**
-
-#### Update pacman
-```shell
-$ sudo pacman -Syu
+# or you can use swapon /dev/sda2
 ```
 
 #### Finish Setting up Internet
@@ -178,6 +166,11 @@ $ systemctl enable NetworkManager.service
 $ nmcli
 # Network Manager Terminal User Interface
 $ nmtui
+```
+
+#### Update pacman
+```shell
+$ sudo pacman -Syu
 ```
 
 #### Install X Window
@@ -201,7 +194,7 @@ $ pacman -S xf86-video-intel
 
 #### Install Desktop Environment i.e. BSPWM
 ```shell
-$ sudo pacman -S bspwm sxhkd dmenu
+$ sudo pacman -S bspwm sxhkd
 ```
 
 #### Install Display Manager
@@ -254,10 +247,10 @@ In the Polybar config file, change the monitor line to whatever your display is 
 
 #### Get Fonts
 ```shell
-$ pacaur -S ttf-hack
+$ pacaur -S ttf-hack ttf-font-awesome-4
 ```
 
-#### Get Dmenu2
+#### Get Dmenu 2
 ```shell
 $ pacaur -S dmenu2
 ```
@@ -265,7 +258,10 @@ $ pacaur -S dmenu2
 #### Setup Desktop Background
 ```shell
 $ sudo pacman -S feh
+# Scale Background
 $ feh --bg-scale (image path)
+# Tile Background
+$ feh --bg-tile (image path)
 ```
 
 #### Install Vundle
@@ -273,7 +269,7 @@ $ feh --bg-scale (image path)
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-Then configure the plugins for vim or nvim.
+Then configure the plugins for vim or nvim with `:PluginInstall` or `PluginUpdate`
 
 #### In case of key unavailable for AUR
 ```shell
