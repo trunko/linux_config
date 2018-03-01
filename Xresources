@@ -1,4 +1,6 @@
-*.font: xft:Hack:size=12
+*.font:                 xft:Hack:size=12
+
+Xcursor.theme:          Breeze_Default
 
 Xft.dpi:                96
 Xft.antialias:          true
