@@ -6,9 +6,9 @@ dynamic_title = false
 font = Hack 12
 #fullscreen = true
 #geometry = 640x480
-icon_name = terminal
+#icon_name = terminal
 mouse_autohide = true
-scroll_on_output = true
+scroll_on_output = false
 scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"

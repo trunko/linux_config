@@ -6,8 +6,8 @@ if ! [ $# -eq 0 ]
 then
     if [ $1 = "bspwm" ]
     then
-        cp -r ~/.config/bspwm ./config/bspwm
-        cp -r ~/.config/sxhkd ./config/sxhkd
+        cp -r ~/.config/bspwm ./config
+        cp -r ~/.config/sxhkd ./config
         cp ~/.xinitrc ./xinitrc/bspwm
     elif [ $1 = "i3" ]
     then
@@ -31,15 +31,15 @@ cp ~/Pictures/wallpaper ./wallpaper
 
 # Update Polybar Config
 
-cp -r ~/.config/polybar ./config/polybar
+cp -r ~/.config/polybar ./config
 
 # Update Neovim Config
 
-cp -r ~/.config/nvim ./config/nvim
+cp -r ~/.config/nvim ./config
 
 # Update Termite Config
 
-cp -r ~/.config/termite ./config/termite
-cp -r ~/.config/gtk-3.0 ./config/gtk-3.0
+cp -r ~/.config/termite ./config
+cp -r ~/.config/gtk-3.0 ./config
 
-cp -r ~/.icons ./icons
+cp -r ~/.icons/* ./icons/

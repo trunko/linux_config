@@ -6,7 +6,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto --group-directories-first -h'
-alias la='ls --color-auto --group-directories-first -h -A'
 PS1='\u@\h: \W \$ '
 
 export NVM_DIR="$HOME/.nvm"

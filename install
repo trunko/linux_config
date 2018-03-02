@@ -10,14 +10,14 @@ if [ ! $# -eq 0 ]
 then
     if [ $1 = "bspwm" ]
     then
-        cp -r ./config/bspwm ~/.config/bspwm
+        cp -r ./config/bspwm ~/.config
 
-        cp -r ./config/sxhkd ~/.config/sxhkd
+        cp -r ./config/sxhkd ~/.config
 
         cp ./xinitrc/bspwm ~/.xinitrc
     elif [ $1 = "i3" ]
     then
-        cp -r ./config/i3 ~/.config/i3
+        cp -r ./config/i3 ~/.config
 
         cp ./xinitrc/i3 ~/.xinitrc
     elif [ $1 = "openbox" ]
@@ -44,20 +44,20 @@ cp ./wallpaper ~/Pictures/
 
 # Create Polybar Config Directory and File
 
-cp -r ./config/polybar ~/.config/polybar
+cp -r ./config/polybar ~/.config
 
 # Create Neovim Config Directory and File
 
-cp -r ./config/nvim ~/.config/nvim
+cp -r ./config/nvim ~/.config
 
 # Create Termite Config Directory and File
 
-cp -r ./config/termite ~/.config/termite
+cp -r ./config/termite ~/.config
 
 # Create GTK3.0 Config Directory
 
-cp -r ./config/gtk-3.0 ~/.config/gtk-3.0
+cp -r ./config/gtk-3.0 ~/.config
 
 # Create Icons Directory
 
-cp -r ./icons ~/.icons
+cp ./icons/* ~/.icons/
