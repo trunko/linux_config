@@ -250,6 +250,11 @@ In the Polybar config file, change the monitor line to whatever your display is 
 $ pacaur -S ttf-hack ttf-font-awesome-4
 ```
 
+#### Get Mouse Pointer
+```shell
+$ pacaur -S breeze-default-cursor-theme
+```
+
 #### Get Dmenu 2
 ```shell
 $ pacaur -S dmenu2
