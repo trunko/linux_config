@@ -252,8 +252,8 @@ $ pacaur -S ttf-hack ttf-font-awesome-4
 
 #### Get And Install Mouse Pointer
 ```shell
-$ pacaur -S breeze-default-cursor-theme
-$ sudo cp .icons/default/index.theme /usr/share/icons/default/index.theme
+$ pacaur -S breeze-default-cursor-theme lxappearance
+# Use lxappearance to change settings
 ```
 
 #### Get Dmenu 2
