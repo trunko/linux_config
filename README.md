@@ -277,6 +277,15 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Then configure the plugins for vim or nvim with `:PluginInstall` or `PluginUpdate`
 
+#### Power Management Setup
+```shell
+$ sudo pacman -S tlp
+$ systemctl enable tlp.service
+$ systemctl enable tlp-sleep.service
+$ systemctl mask systemd-rfkill.service
+$ systemctl mask systemd-rfkill.socket
+```
+
 #### In case of key unavailable for AUR
 ```shell
 $ gpg --recv-key key
