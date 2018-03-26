@@ -60,4 +60,4 @@ cp -r ./config/gtk-3.0 ~/.config
 
 # Create Icons Directory
 
-cp ./icons/* ~/.icons/
+cp -r ./icons/* ~/.icons/
