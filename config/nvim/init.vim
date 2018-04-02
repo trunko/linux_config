@@ -1,66 +1,91 @@
-set nocompatible
 filetype off
-set hidden
 
+" Set the runtime path to include Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Lets Vundle manage itself
 Plugin 'VundleVim/Vundle.vim'
+
+" Cosmetic
 Plugin 'itchyny/lightline.vim'
+Plugin 'yggdroot/indentline'
+
+" Syntax
+Plugin 'pangloss/vim-javascript'
+Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-markdown'
+
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
+
+" Git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
+" Use cs"' to change "hello" to 'hello'
+Plugin 'tpope/vim-surround'
+
+" Use gcc to comment a line
+Plugin 'tpope/vim-commentary'
+
+" Use :Tab /= to align on the = character
+Plugin 'godlygeek/tabular'
+
+" Auto inserts a pair to parenthesis, brackets, etc.
+Plugin 'jiangmiao/auto-pairs'
+
+" Paint css colors with the real color
+Plugin 'lilydjwg/colorizer'
+
+" Linting
+Plugin 'vim-syntastic/syntastic'
+
 call vundle#end()
 
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+
+syntax on
+set hidden
+
+set wildmenu
+set wildmode=list:longest
+
+set showcmd
+set backspace=indent,eol,start
+set autoindent
+set nostartofline
+set ruler
+set laststatus=2
+set confirm
+set visualbell
+set t_vb=
+set mouse=a
+set number
 
 set encoding=utf-8
 set t_Co=256
-
-syntax on
-
-set number
-set ruler
-
-set showcmd
+set nowrap
 
 set noshowmode
 
 set noswapfile
 set nobackup
 
-set hidden
-set autoread
-set wrap
-set nostartofline
-set wildmenu
-set confirm
-set visualbell
-set t_vb=
-set laststatus=2
-
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set backspace=indent,eol,start
 
 set nohlsearch
 set incsearch
-set showmatch
 set ignorecase
 set smartcase
-set gdefault
+set infercase
 
-nnoremap <CR> :nohlsearch<cr>
-nnoremap <Space> za
-nnoremap B ^
-nnoremap E $
-nnoremap $ <nop>
-nnoremap ^ <nop>
+set scrolloff=10
 
-map Y y$
+nnoremap Y y$
 
 let g:lightline = {
   \ 'colorscheme': 'wombat',
