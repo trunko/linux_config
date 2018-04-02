@@ -247,7 +247,7 @@ In the Polybar config file, change the monitor line to whatever your display is 
 
 #### Get Fonts
 ```shell
-$ pacaur -S ttf-hack ttf-font-awesome-4
+$ pacaur -S ttf-hack ttf-font-icons
 ```
 
 #### Get And Install Mouse Pointer
