@@ -15,7 +15,7 @@ fg = ${xrdb:foreground}
 [bar/bspbar]
 
 font-0 = "Hack:size=16:weight=bold;3"
-font-1 = "Icons:size=16;3"
+font-1 = "FontAwesome:size=16;3"
 
 foreground = ${colors.fg}
 background = ${colors.bg}
@@ -150,11 +150,11 @@ poll-interval = 1
 
 time-format = %H:%M
 
-format-charging =  <label-charging>
+format-charging =  <label-charging>
 format-charging-padding = 1
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 1
-format-full = 
+format-full = 
 format-full-padding = 1
 
 label-charging = %percentage%%
@@ -169,10 +169,11 @@ label-full = Full
 label-full-foreground = ${colors.fg}
 label-full-background = ${colors.bg}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 
 [module/volume]
@@ -181,7 +182,7 @@ type=internal/volume
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-padding = 1
-format-muted =  <label-muted>
+format-muted =  <label-muted>
 format-muted-padding = 1
 
 ramp-volume-background = ${colors.bg}
@@ -195,9 +196,9 @@ label-muted = Mute
 label-muted-foreground = ${colors.fg}
 label-muted-background = ${colors.bg}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 
 [module/network]
@@ -208,7 +209,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <label-connected>
-label-connected =  %essid%
+label-connected =  %essid%
 label-connected-background = ${colors.bg}
 label-connected-foreground = ${colors.fg}
 label-connected-padding = 1

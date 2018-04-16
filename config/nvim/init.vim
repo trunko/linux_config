@@ -9,7 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Cosmetic
 Plugin 'itchyny/lightline.vim'
-Plugin 'yggdroot/indentline'
+"Plugin 'yggdroot/indentline'
 
 " Syntax
 Plugin 'pangloss/vim-javascript'
@@ -17,7 +17,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-markdown'
 
 " Autocomplete
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " Git
 Plugin 'airblade/vim-gitgutter'
@@ -84,6 +84,8 @@ set smartcase
 set infercase
 
 set scrolloff=10
+
+set termguicolors
 
 nnoremap Y y$
 

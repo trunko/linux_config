@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	dmenu_run -i -h 30 -fn "Hack-16:weight=bold" -nb "#1d1f21" -nf "#c5c8c6" -sb "#c5c8c6" -sf "#1d1f21"
+	dmenu_run -i -h 30 -fn "Hack-16:weight=bold" -nb "#090300" -nf "#a5a2a2" -sb "#a5a2a2" -sf "#090300"
 
 # make sxhkd reload its configuration files:
 super + Escape

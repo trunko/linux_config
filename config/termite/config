@@ -3,7 +3,7 @@ allow_bold = false
 audible_bell = false
 clickable_url = true
 dynamic_title = false
-font = Hack 12
+font = Hack 14
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
@@ -41,12 +41,12 @@ scrollbar = off
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #c5c8c6
-cursor_foreground = #c5c8c6
+cursor = #a5a2a2
+cursor_foreground = #a5a2a2
 
-foreground = #c5c8c6
+foreground = #a5a2a2
 #foreground_bold = #ffffff
-background = #1d1f21
+background = #090300
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
@@ -55,22 +55,22 @@ background = #1d1f21
 #highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color0 = #282a2e
-color1 = #a54242
-color2 = #8c9440
-color3 = #de935f
-color4 = #5f819d
-color5 = #85678f
-color6 = #5e8d87
-color7 = #707880
-color8 = #373b41
-color9 = #cc6666
-color10 = #b5bd68
-color11 = #f0c674
-color12 = #81a2be
-color13 = #b294bb
-color14 = #8abeb7
-color15 = #c5c8c6
+color0 = #090300
+color1 = #db2d20
+color2 = #01a252
+color3 = #fded02
+color4 = #01a0e4
+color5 = #a16a94
+color6 = #b5e4f4
+color7 = #a5a2a2
+color8 = #5c5855
+color9 = #db2d20
+color10 = #01a252
+color11 = #fded02
+color12 = #01a0e4
+color13 = #a16a94
+color14 = #b5e4f4
+color15 = #f7f7f7
 
 [hints]
 #font = Monospace 12
