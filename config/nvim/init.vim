@@ -8,7 +8,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Cosmetic
-Plugin 'itchyny/lightline.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airling/vim-airline-themes'
 "Plugin 'yggdroot/indentline'
 
 " Syntax
@@ -46,6 +48,11 @@ call vundle#end()
 filetype plugin indent on
 
 syntax on
+
+" Sets colorscheme
+set background=dark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 set hidden
 
 set wildmenu
@@ -89,13 +96,11 @@ set termguicolors
 
 nnoremap Y y$
 
-let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ 'active': {
-  \   'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
-  \   'right': [['percent'], ['lineinfo']],
-  \ },
-  \ 'component_function': {
-  \   'gitbranch': 'fugitive#head'
-  \ },
-  \}
+" Hide tildes
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+
+" Configure Airline
+let g:airline_detect_paste=1
+let g:airline_powerline_fonts=1
+
+let g:airline_theme='gruvbox'

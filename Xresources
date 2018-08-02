@@ -35,9 +35,9 @@ URxvt.urlLauncher:      firefox
 URxvt.pointerBlank:     true
 
 ! special
-*.foreground:   #a5a2a2
-*.background:   #090300
-*.cursorColor:  #a5a2a2
+*.foreground:   #ebdbb2
+*.background:   #282828
+*.cursorColor:  #ebdbb2
 
 ! black
 *.color0:       #090300

@@ -3,7 +3,7 @@ allow_bold = false
 audible_bell = false
 clickable_url = true
 dynamic_title = false
-font = Hack 14
+font = Hack 12
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
@@ -41,12 +41,12 @@ scrollbar = off
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #a5a2a2
-cursor_foreground = #a5a2a2
+cursor = #ebdbb2
+cursor_foreground = #ebdbb2
 
-foreground = #a5a2a2
+foreground = #ebdbb2
 #foreground_bold = #ffffff
-background = #090300
+background = #282828
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
